@@ -25,7 +25,7 @@ public class CompanyController {
     public ResponseEntity<Iterable<CompanyConfig>> listAllRealmConfigs() {
     	
     	Iterable<CompanyConfig> log = companyConfigService.getAllCompanyConfigs();
-    	
+    	return new ResponseEntity<>(log, HttpStatus.OK);
     	return new ResponseEntity<>(log, HttpStatus.OK);
     }
     
